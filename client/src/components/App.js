@@ -10,6 +10,7 @@ import "./App.css";
 import Particles from "react-particles-js";
 import ProfileForm from "./ProfileForm/ProfileForm";
 import ChatApp from "./ChatFeature/ChatApp";
+import Recommender from "./Recommender/recommender"
 // const LineLoader = () => {
 //   return <div className="lineloader"></div>;
 // };
@@ -74,6 +75,7 @@ class App extends Component {
           <Route path="/home" exact component={HomePage} />
           <Route path="/edit_profile" exact component={ProfileForm} />
           <Route path="/chat" exact component={ChatApp} />
+          <Route path="/rec" exact component={Recommender} />
         </Router>
       </div>
     );
