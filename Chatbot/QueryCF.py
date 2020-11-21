@@ -130,10 +130,3 @@ class QueryCodeForces:
                     self.problemQueue[tag] = [(difficulty, contestId, index, tag, name)]
         print("Problem Queue Prepared!")
 
-handle = input("Enter Handle:")
-query = QueryCodeForces()
-query.problemsetUpdater()
-query.allProblemStat()
-query.prepareProblemQueue()
-query.userStat(handle)
-result = query.problemRecommender()

@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 from flask import request
 from flask_cors import CORS, cross_origin
 import Try
+import QueryCF as CF
 
 app = Flask(__name__)
 CORS(app)
@@ -17,6 +18,17 @@ def chat():
     bot = Try.ChatBot()
     text= bot.chat(userText)
     return text
+
+@app.route('/get_problems')
+def rec():
+    handle = request.args.get("handle")
+    query = CF.QueryCodeForces()
+    query.problemsetUpdater()
+    query.allProblemStat()
+    query.prepareProblemQueue()
+    query.userStat(handle)
+    result = query.problemRecommender()
+    return result
 
 
 if __name__ == '__main__':
