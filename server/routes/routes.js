@@ -2,12 +2,14 @@ const passport = require("passport");
 const mongoose = require("mongoose");
 const keys = require("../config/keys");
 const axios = require("axios");
+const Messages = mongoose.model("chats");
 var i = 10;
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
 module.exports = (app) => {
   app.get("/", (req, res) => {
     res.send("hello world");
   });
+
   app.get(
     "/auth/google",
     passport.authenticate("google", { scope: ["profile", "email"] })
@@ -73,5 +75,26 @@ module.exports = (app) => {
     } catch (err) {
       res.send(err);
     }
+  });
+
+  app.get("/api/messages/sync", async (req, res) => {
+    Messages.find((err, data) => {
+      if (err) {
+        return res.status(500).send(err);
+      } else {
+        return res.status(200).send(data);
+      }
+    });
+  });
+  app.post("/api/messages/new", async (req, res) => {
+    const message = req.body;
+    console.log(message);
+    Messages.create(message, (err, data) => {
+      if (err) {
+        res.status(500).send(err);
+      } else {
+        res.status(201).send(data);
+      }
+    });
   });
 };

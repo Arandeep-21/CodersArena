@@ -9,6 +9,7 @@
     "animejs": "^3.2.1",
     "aos": "^2.3.4",
     "axios": "^0.21.0",
+    "pusher-js": "^7.0.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-particles-js": "^3.4.1",
