@@ -4,10 +4,11 @@ import NavBar from "../NavBar/NavBar";
 import "./ProfilePage.css";
 import { fetch_problem_data } from "../../actions";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 class ProfilePage extends Component {
   componentDidMount() {
-    this.props.fetch_problem_data("tourist");
+    this.props.fetch_problem_data("lokesh011101");
   }
   render() {
     console.log(this.props.auth);
@@ -43,7 +44,17 @@ class ProfilePage extends Component {
                     </div>
                   </div>
                   <div className="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4"></div>
-                  <button className="btn" type="button">Edit</button>
+                  <div className="loginnn">
+                    <div className="l111">
+                      <Link to="/edit_profile" className="linkedd a11">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div className="span22">Edit</div>
+                      </Link>
+                    </div>
+                  </div>
                   <div className="card-body pt-0 pt-md-4">
                     <div className="row">
                       <div className="col">

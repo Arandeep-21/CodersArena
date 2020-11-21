@@ -317,22 +317,92 @@ h5 {
   margin-top: -10px;
   margin-bottom: 10px;
 }
-.btn {
-  outline-style: none;
-  width: 10%;
-  margin-left: 620px;
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Georgia;
-  color: #f7f2f7;
-  font-size: 16px;
-  background: #878c8f;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+.a11 {
+  padding: 0.4rem;
+  position: relative;
+  display: inline-block;
+  color: aqua;
+  overflow: hidden;
+  transition: 0.2s;
 }
-
-.btn:hover {
-  background: #70aed4;
-  text-decoration: none;
+.a11:hover {
+  color: #000;
+  background: #000000;
+  box-shadow: 0 0 10px #000000, 0 0 40px #000000, 0 0 60px #000000;
+  transition-delay: 0.5s;
+}
+.a11 span {
+  position: absolute;
+  display: block;
+}
+.a11 span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #000000);
+}
+.a11:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.5s;
+}
+.a11 span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(270deg, transparent, #000000);
+}
+.a11:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+.a11 span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #000000);
+}
+.a11:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.5s;
+  transition-delay: 0.125s;
+}
+.a11 span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #000000);
+}
+.a11:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.5s;
+  transition-delay: 0.375s;
+}
+.span22 {
+  display: inline-block;
+  /* background: rgb(54, 104, 189);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 119, 181, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+   */
+  color: black;
+  transition-delay: 0.5s;
+}
+.span22:hover {
+  color: white;
+}
+.loginnn {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 28%;
+  left: 48.4%;
 }

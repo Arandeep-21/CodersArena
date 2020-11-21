@@ -72,7 +72,7 @@ class App extends Component {
           <Route path="/" exact component={LandingPage} />
           <Route path="/profile" exact component={ProfilePage} />
           <Route path="/home" exact component={HomePage} />
-          <Route path="/FormProfile" exact component={ProfileForm} />
+          <Route path="/edit_profile" exact component={ProfileForm} />
           <Route path="/chat" exact component={ChatApp} />
         </Router>
       </div>

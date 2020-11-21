@@ -61,14 +61,14 @@
 .d3 {
   position: absolute;
   background-image: url(https://images.unsplash.com/photo-1562813733-b31f71025d54?ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80);
-  background-size: 2700px 1500px;
+  background-size: 1500px 1000px;
   overflow: hidden;
 
   height: 70vh;
   width: 35vw;
   left: 7vw;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
-  background-position: -35vw 50%;
+  background-position: -49vw 50%;
   filter: blur(4px);
   top: 10%;
   transform: translateY(-50%);
@@ -174,7 +174,6 @@
   z-index: 999;
   position: absolute;
   top: 37%;
-  font-family: "Dancing Script", cursive;
   font-family: "Goldman", cursive;
   font-size: 2.5rem;
   color: white;
@@ -255,6 +254,8 @@
   transition-delay: 0.375s;
 }
 .span2 {
+  font-size: 1.5rem;
+  font-weight: bold;
   display: inline-block;
   background: rgb(54, 104, 189);
   background: linear-gradient(
