@@ -1,0 +1,49 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "hey"],
+         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+
+         {"tag": "feat",
+         "patterns": ["Features", " options?", "study", "about"],
+         "responses": ["WELCOME!!! If you're new to CP this would be a great place for you, Create rooms with your coding buddies, bring in question, brainstorm a solution.",
+                      "Glad to see your interest, Check out our resources section: "]
+
+        },
+
+        {"tag": "helpmeh",
+         "patterns": ["Help", "Assist", "help"],
+         "responses": ["Hey there, we have a ton of features from custom groups to powerful insights, Question adder and much more, feel free to explore!!!"]
+
+        },
+
+        {"tag": "lang",
+         "patterns": ["best Language", "best programming language", "which language should i use", "which language", "Code"],
+         "responses": ["You can choose either C plus plus or Java" , "My personal choice would be C plus plus", "Speaking of CP, CPP is the best"]
+        },
+
+
+         {"tag": "material",
+         "patterns": ["Start", "Resources", "What to learn", "topics", "seek", "learn"],
+         "responses": ["https://www.geeksforgeeks.org/ if a great place if you're a beginner, you can also check CP Algorithms", "check out our resources page"]
+
+        },
+
+        {"tag": "dummy",
+          "patterns": ["asdfgsadf", "fgydgfasdf", "Contest", "bored", "omg"],
+          "responses": ["Ask something else" , "Better start coding, try contests from CodeForces or CodeChef"]
+
+        }
+]
+}

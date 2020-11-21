@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Goldman&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+.landingpage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doodle {
+  position: relative;
+  height: 100vh;
+  width: 50vw;
+}
+.d1 {
+  position: absolute;
+  background-image: url(https://newevolutiondesigns.com/images/freebies/4k-wallpaper-3.jpg);
+  background-size: 2700px 1500px;
+  height: 18vh;
+  width: 53vw;
+  filter: blur(2px);
+  background-position: Calc(-50vw - 350px);
+  left: -8vw;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+  top: 35%;
+  transform: translateY(-50%);
+  z-index: 20;
+  animation: dd1 2.5s 1, dd12 2.5s 1;
+}
+.d2 {
+  position: absolute;
+  background-image: url(https://newevolutiondesigns.com/images/freebies/4k-wallpaper-3.jpg);
+  background-size: 2700px 1500px;
+
+  height: 33vh;
+  width: 12.5vw;
+  filter: blur(6px);
+
+  background-position: -10vw 50%;
+  left: -1vw;
+
+  top: 28%;
+  transform: translateY(-50%);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  /* animation: dd2 10s 2;
+  animation-delay: 4s; */
+}
+.d3 {
+  position: absolute;
+  background-image: url(https://newevolutiondesigns.com/images/freebies/4k-wallpaper-3.jpg);
+  background-size: 2700px 1500px;
+  overflow: hidden;
+
+  height: 70vh;
+  width: 35vw;
+  left: 7vw;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+  background-position: -35vw 50%;
+  filter: blur(4px);
+  top: 10%;
+  transform: translateY(-50%);
+  z-index: 3;
+  /* animation: dd3 10s 2;
+  animation-delay: 4s; */
+}
+.d4 {
+  position: absolute;
+  overflow: hidden;
+  background-image: url(https://newevolutiondesigns.com/images/freebies/4k-wallpaper-3.jpg);
+  background-size: 2700px 1500px;
+  filter: blur(6px);
+  height: 45vh;
+  width: 12.5vw;
+  left: 40vw;
+  background-position: -70vw 50%;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8), 0px 0px 15px rgba(0, 0, 0, 0.5);
+  top: 21%;
+  transform: translateY(-50%);
+  z-index: 1;
+  /* animation: dd4 10s 2;
+  animation-delay: 4s; */
+}
+
+@keyframes dd1 {
+  0% {
+  }
+  50% {
+    width: 70%;
+  }
+  0% {
+    width: 100%;
+  }
+}
+@keyframes dd12 {
+  0% {
+  }
+  70% {
+    background-position: Calc(0vw - 350px) 50%;
+  }
+  0% {
+    background-position: Calc(-50vw - 350px) 50%;
+  }
+}
+@keyframes dd2 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-10vw - 40px) 50%;
+  }
+}
+@keyframes dd3 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-35vw - 40px) 50%;
+  }
+}
+@keyframes dd4 {
+  0% {
+  }
+  50% {
+    background-position: Calc(-70vw - 40px) 50%;
+  }
+}
+
+/* .btn {
+  outline-width: 0;
+  position: absolute;
+  z-index: 50;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 24;
+  -moz-border-radius: 24;
+  border-radius: 24px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 42px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-top: 80%;
+  margin-right: 20%;
+  margin-left: 110%;
+  margin-bottom: 30%;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+*/
+.title_container {
+  z-index: 999;
+  position: absolute;
+  top: 37%;
+  font-family: "Dancing Script", cursive;
+  font-family: "Goldman", cursive;
+  font-size: 2.5rem;
+  color: white;
+}
+.title_container h1 {
+  /* background: linear-gradient(to left, #002671 0%, #8c0000 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: rgb(255, 255, 247);
+  text-shadow: black 2px 6px 10px;
+}
+
+/* for login butt */
+
+.a1 {
+  padding: 0.4rem;
+  position: relative;
+  display: inline-block;
+  color: aqua;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.a1:hover {
+  color: #000;
+  background: #21e9f3;
+  box-shadow: 0 0 10px #21e9f3, 0 0 40px #21e9f3, 0 0 60px #21e9f3;
+  transition-delay: 0.5s;
+}
+.a1 span {
+  position: absolute;
+  display: block;
+}
+.a1 span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #21e9f3);
+}
+.a1:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.5s;
+}
+.a1 span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(270deg, transparent, #21e9f3);
+}
+.a1:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+.a1 span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #21e9f3);
+}
+.a1:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.5s;
+  transition-delay: 0.125s;
+}
+.a1 span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #21e9f3);
+}
+.a1:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.5s;
+  transition-delay: 0.375s;
+}
+.span2 {
+  display: inline-block;
+  background: rgb(54, 104, 189);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 119, 181, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.loginn {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 85%;
+  left: 48%;
+}
