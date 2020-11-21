@@ -1,0 +1,60 @@
+.cntcont {
+  color: #000;
+  width: 103%;
+  background-color: rgb(255, 255, 255);
+  height: 280px;
+  margin-top: 65px;
+  border-radius: 5px;
+  overflow: scroll;
+}
+.h2cnt {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.rescnt-container {
+  counter-reset: index;
+  padding: 0;
+}
+.cnta {
+  color: #000 !important;
+  transition: 1s;
+}
+.cnta:hover {
+  color: rgb(0, 32, 56);
+}
+/* List element */
+.rescnt-container li {
+  counter-increment: index;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Element counter */
+.rescnt-container li::before {
+  content: counters(index, ".", decimal-leading-zero);
+  font-size: 1rem;
+  text-align: right;
+  font-weight: bold;
+  min-width: 50px;
+  margin-left: -15px !important;
+  padding-right: 12px;
+  font-variant-numeric: tabular-nums;
+  align-self: flex-start;
+  background-image: linear-gradient(to bottom, rgb(134, 53, 255), orangered);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Element separation */
+.rescnt-container li + .rescnt-container li {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.tdcnt-wrapper {
+  color: white;
+  font-size: 1.2rem;
+  width: 50vw;
+}

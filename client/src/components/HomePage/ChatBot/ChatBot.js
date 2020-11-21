@@ -3,6 +3,7 @@ import axios from "axios";
 import "../HomePage.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Contests from "../Contests/Contests";
 class ChatBot extends React.Component {
   constructor(props) {
     super(props);
@@ -88,6 +89,7 @@ class ChatBot extends React.Component {
   render() {
     return (
       <div id="app-container">
+        <Contests />
         <div className="convo-container">
           <BotBubble message={this.state.botGreeting} key="bot-00" />
           {this.showMessages()}

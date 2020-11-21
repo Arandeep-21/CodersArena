@@ -97,4 +97,39 @@ module.exports = (app) => {
       }
     });
   });
+  app.get("/api/cnts", async (req, res) => {
+    try {
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, "0");
+      var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+      var yyyy = today.getFullYear();
+
+      today = yyyy + "-" + mm + "-" + dd;
+      var currentTime = new Date();
+      var currentOffset = currentTime.getTimezoneOffset();
+      var ISTOffset = 330;
+      var ISTTime = new Date(
+        currentTime.getTime() + (ISTOffset + currentOffset) * 60000
+      );
+      var hoursIST = ISTTime.getHours();
+      var minutesIST = ISTTime.getMinutes();
+      if (hoursIST < 10) hoursIST = hoursIST.toString() + "0";
+      if (minutesIST < 10) minutesIST = minutesIST.toString() + "0";
+      let last = today + "T" + hoursIST + ":" + minutesIST + ":00";
+
+      const { data } = await axios.get("https://clist.by:443/api/v1/contest/", {
+        params: {
+          limit: 35,
+          username: "lokesh011101",
+          api_key: "f53082078e78b3559785d640dce0b794f65336f8",
+          start__gte: new Date(),
+          order_by: "end",
+        },
+      });
+      res.send(data);
+    } catch (error) {
+      console.log(error);
+      res.send(error);
+    }
+  });
 };
