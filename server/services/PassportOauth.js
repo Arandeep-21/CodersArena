@@ -1,16 +1,16 @@
 const passport = require("passport");
-const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
-const keys = require("../config/keys");
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const mongoose = require("mongoose");
+const keys = require("../config/keys");
 
 const User = mongoose.model("users");
-passport.serializeUser(function (user, cb) {
-  cb(null, user.id);
+passport.serializeUser((user, done) => {
+  done(null, user.id);
 });
 
-passport.deserializeUser(function (id, cb) {
+passport.deserializeUser((id, done) => {
   User.findById(id).then((user) => {
-    cb(null, user);
+    done(null, user);
   });
 });
 
@@ -23,9 +23,8 @@ passport.use(
       proxy: true,
     },
     async (accessToken, refreshToken, profile, done) => {
-      console.log(profile);
       const existingUser = await User.findOne({ googleId: profile.id });
-
+      console.log(profile);
       if (existingUser) {
         return done(null, existingUser);
       }
@@ -35,7 +34,7 @@ passport.use(
         email: profile.emails[0].value,
         userImage: profile.photos[0].value,
       }).save();
-      return done(null, profile);
+      done(null, user);
     }
   )
 );
