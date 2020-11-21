@@ -43,6 +43,7 @@ class ProfilePage extends Component {
                     </div>
                   </div>
                   <div className="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4"></div>
+                  <button className="btn" type="button">Edit</button>
                   <div className="card-body pt-0 pt-md-4">
                     <div className="row">
                       <div className="col">

@@ -317,3 +317,22 @@ h5 {
   margin-top: -10px;
   margin-bottom: 10px;
 }
+.btn {
+  outline-style: none;
+  width: 10%;
+  margin-left: 620px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Georgia;
+  color: #f7f2f7;
+  font-size: 16px;
+  background: #878c8f;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #70aed4;
+  text-decoration: none;
+}
