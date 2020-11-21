@@ -65,12 +65,7 @@ class Recommender extends React.Component {
             <li>
               <div class="buttons">
                 <div class="reccontainer">
-                  <a
-                    href={el[1]}
-                    class="btn effect04"
-                    data-sm-link-text="CLICK"
-                    target="_blank"
-                  >
+                  <a href={el[1]} class="btn effect04" target="_blank">
                     <span style={{ color: "white" }}>Problem Link</span>
                   </a>
                 </div>

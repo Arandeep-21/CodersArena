@@ -225,3 +225,104 @@ a:-webkit-any-link {
   left: 0;
   right: 0;
 }
+#iframe {
+  position: absolute;
+  top: 20%;
+  height: 70vh;
+  width: 60vw;
+  left: 4%;
+  outline-width: 0;
+}
+
+.buttonss {
+  position: absolute;
+  top: 93%;
+  left: 16%;
+}
+/*btn_background*/
+
+.btnn {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+  max-width: 140px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+.btnn:hover {
+  text-decoration: none;
+}
+.effect05 {
+  --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+  display: var(--uismLinkDisplay);
+  color: #fff;
+  background: transparent;
+  outline: solid 2px #fff;
+  position: relative;
+  transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+.effect05::before,
+.effect05 span {
+  margin: 0 auto;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-duration: 0.4s;
+}
+
+/* 文字1を上に */
+.effect05:hover {
+  background: transparent;
+}
+
+/* HOVERしたら文字1を上に */
+.effect05:hover span {
+  -webkit-transform: translateY(-400%) scale(-0.1, 20);
+  transform: translateY(-400%) scale(-0.1, 20);
+}
+
+/*文字2*/
+.effect05::before {
+  content: "Click";
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(500%) scale(-0.1, 20);
+  transform: translateY(500%) scale(-0.1, 20);
+}
+
+/* HOVERしたら文字2を上に */
+.effect05:hover::before {
+  letter-spacing: 0.05em;
+  -webkit-transform: translateY(0) scale(1, 1);
+  transform: translateY(0) scale(1, 1);
+}
+#leftt {
+  position: absolute;
+  top: 0%;
+  left: 106%;
+}
+.modelll {
+  position: absolute;
+  top: 11%;
+  left: 3.5%;
+  color: #fff;
+  font-size: 3rem;
+  background: linear-gradient(to left, #44eec7 0%, #6393d6 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Dancing Script", cursive;
+}
+
+.drpdn {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  outline: none;
+}

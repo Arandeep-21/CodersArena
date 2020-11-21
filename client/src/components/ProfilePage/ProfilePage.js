@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 class ProfilePage extends Component {
   componentDidMount() {
-    this.props.fetch_problem_data("lokesh011101");
+    this.props.fetch_problem_data("tourist");
   }
   render() {
     console.log(this.props.auth);

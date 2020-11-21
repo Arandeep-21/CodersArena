@@ -14,9 +14,7 @@ class Contests extends Component {
   render() {
     if (this.state.contests) {
       let x = this.state.contests;
-      console.log(x);
       const y = Object.keys(x).map((cnt) => {
-        console.log(x[cnt]);
         return (
           <li className="tdcnt-wrapper cntn" style={{ color: "black" }}>
             <a className="cnta" href={x[cnt].href}>

@@ -77,7 +77,7 @@
 
 /*文字2*/
 .effect04::before {
-  content: attr(data-sm-link-text);
+  content: "Click!";
   color: #fff;
   position: absolute;
   left: 0;
