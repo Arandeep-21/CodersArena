@@ -8,3 +8,10 @@ const UserInfo = new Schema({
   userImage: String,
 });
 mongoose.model("users", UserInfo);
+const chatSchema = mongoose.Schema({
+  message: String,
+  name: String,
+  timeStamp: String,
+  received: String,
+});
+mongoose.model("chats", chatSchema);

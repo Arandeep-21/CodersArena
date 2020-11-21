@@ -10,10 +10,40 @@ require("./models/models");
 require("./services/PassportOauth");
 const keys = require("./config/keys");
 const path = require("path");
+const Pusher = require("pusher");
 
 mongoose.connect(keys.mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useCreateIndex: true,
+});
+const pusher = new Pusher({
+  appId: "1110864",
+  key: "8d3361db75fa48d92ab2",
+  secret: "f4b9a06fe0721311515f",
+  cluster: "eu",
+  useTLS: true,
+});
+const db = mongoose.connection;
+db.once("open", () => {
+  const msgs = db.collection("chats");
+  const changeStream = msgs.watch();
+  console.log("chat db connected");
+
+  changeStream.on("change", (change) => {
+    console.log("a change occured", change);
+    if (change.operationType === "insert") {
+      const msgDetails = change.fullDocument;
+      pusher.trigger("messages", "inserted", {
+        name: msgDetails.name,
+        message: msgDetails.message,
+        timeStamp: msgDetails.timeStamp,
+        received: msgDetails.received,
+      });
+    } else {
+      console.log("error in pusher");
+    }
+  });
 });
 
 app.use(
@@ -41,7 +71,6 @@ app.use(passport.session());
 
 app.set("view engine", "html");
 require("./routes/routes.js")(app);
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {

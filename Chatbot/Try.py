@@ -5,7 +5,6 @@ from tensorflow.python.framework import ops
 import pickle
 import random
 import json
-
 from nltk.stem.lancaster import LancasterStemmer
 
 class ChatBot:

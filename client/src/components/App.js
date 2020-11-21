@@ -9,6 +9,7 @@ import HomePage from "./HomePage/HomePage";
 import "./App.css";
 import Particles from "react-particles-js";
 import ProfileForm from "./ProfileForm/ProfileForm";
+import ChatApp from "./ChatFeature/ChatApp";
 // const LineLoader = () => {
 //   return <div className="lineloader"></div>;
 // };
@@ -72,6 +73,7 @@ class App extends Component {
           <Route path="/profile" exact component={ProfilePage} />
           <Route path="/home" exact component={HomePage} />
           <Route path="/FormProfile" exact component={ProfileForm} />
+          <Route path="/chat" exact component={ChatApp} />
         </Router>
       </div>
     );
