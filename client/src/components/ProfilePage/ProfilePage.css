@@ -8,7 +8,9 @@ section {
   padding-left: 10%;
   padding-top: 3%;
 }
-
+.ppcontainer {
+  width: 100vw !important;
+}
 .h1pp,
 .h3pp,
 .h5pp {
