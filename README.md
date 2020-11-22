@@ -1,4 +1,4 @@
-# HackSrmSaitamaSquad
+# Coder's Arena
 There has always been a lack of knowledge of resources and proper guidance when it comes to self learning programming and we have faced it so many times. So we decided to make the lives of the future generation easier by making a web app in which newbie coders can get proper guidance for programming and understand concepts in a clearer manner.
 
 So in order to make the lives of the future generations easier in the domain of programming, we have made a web app which has personalized profiles for each user, and for learning algorithms in a simpler manner, we have introduced a platform where people can learn Data Structures And Algorithms in Augmented or Virtual Reality(AR/VR) with the help of EchoAR. The user also receives personalized problem suggestions so that they upskill themselves. We also plan to answer the questions the user has with a highly intelligent chatbot.Users can also form think-tanks and can get proper guidance from users who have higher skill sets.
